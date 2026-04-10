@@ -149,7 +149,7 @@ After training on the Kaggle Concrete Crack dataset (40,000 images):
 | Precision | ~99.1% | ~99.3% |
 | Recall | ~99.3% | ~99.1% |
 | F1-Score | ~99.2% | ~99.2% |
-| **Overall Accuracy** | **~99.2%** | |
+| **Overall Accuracy** | **~99.16%** | |
 
 ---
 
