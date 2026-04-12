@@ -1,10 +1,10 @@
               precision    recall  f1-score   support
 
-   corrosion     0.9091    0.9375    0.9231       128
-       crack     0.9337    0.7517    0.8329       600
-      intact     0.7922    0.9467    0.8626       600
-    spalling     0.7500    0.6667    0.7059        36
+   corrosion     0.8760    0.8281    0.8514       128
+       crack     0.9007    0.8017    0.8483       600
+      intact     0.8212    0.9183    0.8670       600
+    spalling     0.8960    0.9050    0.9005       200
 
-    accuracy                         0.8526      1364
-   macro avg     0.8463    0.8256    0.8311      1364
-weighted avg     0.8643    0.8526    0.8510      1364
+    accuracy                         0.8632      1528
+   macro avg     0.8735    0.8633    0.8668      1528
+weighted avg     0.8668    0.8632    0.8628      1528

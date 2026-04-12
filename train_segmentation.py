@@ -26,7 +26,7 @@ RESULTS_DIR = "results"
 NUM_CLASSES = 3
 BATCH_SIZE  = 4
 NUM_EPOCHS  = 20
-LR          = 1e-4
+LR          = 5e-5
 IMG_SIZE    = 256
 DEVICE      = torch.device("cpu")
 
@@ -85,7 +85,7 @@ model.aux_classifier[4] = nn.Conv2d(256, NUM_CLASSES, kernel_size=1)
 model = model.to(DEVICE)
 
 for name, param in model.named_parameters():
-    if "classifier" in name or "aux_classifier" in name:
+    if "layer4" in name or "classifier" in name or "aux_classifier" in name:
         param.requires_grad = True
     else:
         param.requires_grad = False
