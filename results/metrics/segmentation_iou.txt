@@ -1,0 +1,7 @@
+Per-Class IoU Breakdown
+========================================
+Background: 0.8953
+Corrosion: 0.7689
+Spalling: 0.7027
+mIoU: 0.7890
+Pixel Accuracy: 0.9177

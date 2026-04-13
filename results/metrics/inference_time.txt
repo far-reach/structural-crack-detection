@@ -1,0 +1,4 @@
+Mean CPU inference time: 16.29 ms/frame
+CPU throughput: 61.39 FPS
+Estimated GPU time: 1.09 ms/frame
+Estimated GPU FPS: 917 FPS
