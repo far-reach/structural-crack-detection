@@ -1,99 +1,99 @@
 {
-  "date": "2026-04-12 17:39",
+  "date": "2026-04-13 04:39",
   "grid": "4x5",
   "total_frames": 20,
-  "damaged_zones": 18,
-  "damage_rate": 90.0,
+  "damaged_zones": 16,
+  "damage_rate": 80.0,
   "class_counts": {
-    "corrosion": 8,
+    "intact": 4,
     "crack": 6,
-    "spalling": 4,
-    "intact": 2
+    "spalling": 2,
+    "corrosion": 8
   },
   "frames": [
     {
       "row": 0,
       "col": 0,
-      "label": "corrosion",
-      "confidence": 86.3,
-      "path": "data/codebrim\\val\\intact\\004-188.jpg"
+      "label": "intact",
+      "confidence": 58.5,
+      "path": "data/codebrim\\val\\crack\\009-56.jpg"
     },
     {
       "row": 0,
       "col": 1,
       "label": "crack",
-      "confidence": 53.4,
-      "path": "data/codebrim\\val\\spalling\\604_256_256.png"
+      "confidence": 99.8,
+      "path": "data/codebrim\\val\\corrosion\\563_256_768.png"
     },
     {
       "row": 0,
       "col": 2,
-      "label": "crack",
-      "confidence": 100.0,
-      "path": "data/codebrim\\val\\corrosion\\563_256_256.png"
-    },
-    {
-      "row": 0,
-      "col": 3,
-      "label": "corrosion",
-      "confidence": 56.4,
-      "path": "data/codebrim\\val\\crack\\005-224.jpg"
-    },
-    {
-      "row": 0,
-      "col": 4,
-      "label": "corrosion",
-      "confidence": 76.0,
-      "path": "data/codebrim\\val\\crack\\007-83.jpg"
-    },
-    {
-      "row": 1,
-      "col": 4,
-      "label": "crack",
-      "confidence": 82.4,
+      "label": "spalling",
+      "confidence": 83.2,
       "path": "data/codebrim\\val\\spalling\\604_0_256.png"
     },
     {
+      "row": 0,
+      "col": 3,
+      "label": "crack",
+      "confidence": 52.4,
+      "path": "data/codebrim\\val\\corrosion\\563_256_512.png"
+    },
+    {
+      "row": 0,
+      "col": 4,
+      "label": "corrosion",
+      "confidence": 98.6,
+      "path": "data/codebrim\\val\\crack\\008-145.jpg"
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "label": "corrosion",
+      "confidence": 82.0,
+      "path": "data/codebrim\\val\\intact\\004-188.jpg"
+    },
+    {
       "row": 1,
       "col": 3,
-      "label": "spalling",
-      "confidence": 95.3,
-      "path": "data/codebrim\\val\\spalling\\573_0_0.png"
+      "label": "corrosion",
+      "confidence": 93.5,
+      "path": "data/codebrim\\val\\intact\\003-5.jpg"
     },
     {
       "row": 1,
       "col": 2,
-      "label": "corrosion",
-      "confidence": 86.0,
-      "path": "data/codebrim\\val\\intact\\001-161.jpg"
-    },
-    {
-      "row": 1,
-      "col": 1,
       "label": "spalling",
-      "confidence": 99.4,
-      "path": "data/codebrim\\val\\spalling\\599_512_256.png"
+      "confidence": 51.8,
+      "path": "data/codebrim\\val\\spalling\\573_0_256.png"
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "label": "intact",
+      "confidence": 89.8,
+      "path": "data/codebrim\\val\\crack\\005-82.jpg"
     },
     {
       "row": 1,
       "col": 0,
-      "label": "intact",
-      "confidence": 95.4,
-      "path": "data/codebrim\\val\\crack\\005-63.jpg"
+      "label": "crack",
+      "confidence": 100.0,
+      "path": "data/codebrim\\val\\corrosion\\563_256_0.png"
     },
     {
       "row": 2,
       "col": 0,
       "label": "corrosion",
-      "confidence": 96.9,
-      "path": "data/codebrim\\val\\intact\\001-208.jpg"
+      "confidence": 98.0,
+      "path": "data/codebrim\\val\\intact\\003-54.jpg"
     },
     {
       "row": 2,
       "col": 1,
       "label": "corrosion",
-      "confidence": 96.4,
-      "path": "data/codebrim\\val\\intact\\001-47.jpg"
+      "confidence": 87.8,
+      "path": "data/codebrim\\val\\crack\\007-83.jpg"
     },
     {
       "row": 2,
@@ -106,50 +106,50 @@
       "row": 2,
       "col": 3,
       "label": "corrosion",
-      "confidence": 98.5,
-      "path": "data/codebrim\\val\\intact\\003-54.jpg"
+      "confidence": 79.7,
+      "path": "data/codebrim\\val\\intact\\001-47.jpg"
     },
     {
       "row": 2,
       "col": 4,
-      "label": "spalling",
-      "confidence": 93.2,
-      "path": "data/codebrim\\val\\spalling\\573_0_256.png"
-    },
-    {
-      "row": 3,
-      "col": 4,
       "label": "crack",
-      "confidence": 99.6,
+      "confidence": 99.9,
       "path": "data/codebrim\\val\\corrosion\\563_0_256.png"
     },
     {
       "row": 3,
+      "col": 4,
+      "label": "intact",
+      "confidence": 98.7,
+      "path": "data/codebrim\\val\\crack\\005-63.jpg"
+    },
+    {
+      "row": 3,
       "col": 3,
-      "label": "spalling",
-      "confidence": 100.0,
-      "path": "data/codebrim\\val\\spalling\\573_512_512.png"
+      "label": "corrosion",
+      "confidence": 62.4,
+      "path": "data/codebrim\\val\\intact\\001-142.jpg"
     },
     {
       "row": 3,
       "col": 2,
-      "label": "corrosion",
-      "confidence": 77.3,
-      "path": "data/codebrim\\val\\intact\\005-109.jpg"
+      "label": "intact",
+      "confidence": 77.4,
+      "path": "data/codebrim\\val\\crack\\004-127.jpg"
     },
     {
       "row": 3,
       "col": 1,
-      "label": "intact",
-      "confidence": 74.4,
-      "path": "data/codebrim\\val\\crack\\004-127.jpg"
+      "label": "corrosion",
+      "confidence": 97.7,
+      "path": "data/codebrim\\val\\intact\\001-185.jpg"
     },
     {
       "row": 3,
       "col": 0,
       "label": "crack",
-      "confidence": 96.0,
-      "path": "data/codebrim\\val\\corrosion\\563_512_0.png"
+      "confidence": 93.2,
+      "path": "data/codebrim\\val\\corrosion\\563_0_512.png"
     }
   ]
 }
