@@ -1,19 +1,17 @@
 """
 Stage 2: Semantic Segmentation for Structural Damage
-DeepLabV3+ with ResNet50 backbone
-Classes: 0=background, 1=corrosion, 2=spalling
+DeepLabV3+ with ResNet50 backbone - Layer3+4 unfrozen
 Author: Seyed Farhad Abtahi
 """
 
 import os
 import time
-import copy
 import json
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-from torchvision import models, transforms
+from torchvision import transforms
 from torchvision.models.segmentation import deeplabv3_resnet50
 import numpy as np
 from PIL import Image
@@ -25,11 +23,10 @@ MODEL_DIR   = "models"
 RESULTS_DIR = "results"
 NUM_CLASSES = 3
 BATCH_SIZE  = 4
-NUM_EPOCHS  = 20
-LR          = 5e-5
+NUM_EPOCHS  = 25
+LR          = 2e-5
 IMG_SIZE    = 256
 DEVICE      = torch.device("cpu")
-
 CORROSION_COLOR = (255, 0, 0)
 SPALLING_COLOR  = (255, 255, 0)
 
@@ -40,7 +37,6 @@ print("PyTorch: " + str(torch.__version__))
 class SegmentationDataset(Dataset):
     def __init__(self, split="train", img_size=256):
         self.img_size = img_size
-        self.split    = split
         self.src_dir  = os.path.join(DATA_DIR, split)
         all_files     = os.listdir(self.src_dir)
         self.images   = sorted([f for f in all_files
@@ -67,8 +63,7 @@ class SegmentationDataset(Dataset):
             transforms.Normalize([0.485, 0.456, 0.406],
                                  [0.229, 0.224, 0.225])
         ])(img)
-        mask_path = os.path.join(self.src_dir, mask_name)
-        label     = self.mask_to_label(mask_path)
+        label = self.mask_to_label(os.path.join(self.src_dir, mask_name))
         return img, label
 
 
@@ -85,7 +80,7 @@ model.aux_classifier[4] = nn.Conv2d(256, NUM_CLASSES, kernel_size=1)
 model = model.to(DEVICE)
 
 for name, param in model.named_parameters():
-    if "layer4" in name or "classifier" in name or "aux_classifier" in name:
+    if "layer3" in name or "layer4" in name or "classifier" in name or "aux_classifier" in name:
         param.requires_grad = True
     else:
         param.requires_grad = False
@@ -162,37 +157,7 @@ for epoch in range(NUM_EPOCHS):
     scheduler.step()
     print("  Epoch time: " + str(round((time.time()-t0)/60, 1)) + " min")
 
+with open(os.path.join(RESULTS_DIR, "metrics", "segmentation_history.json"), "w") as f:
+    json.dump(history, f, indent=2)
 
-print("\nGenerating visualizations...")
-model.load_state_dict(torch.load(os.path.join(MODEL_DIR, "best_deeplabv3_segmentation.pth")))
-model.eval()
-
-COLOR_MAP   = {0: (0,0,0), 1: (255,0,0), 2: (255,255,0)}
-CLASS_NAMES = ["Background", "Corrosion", "Spalling"]
-
-fig, axes      = plt.subplots(3, 3, figsize=(12, 12))
-sample_dataset = SegmentationDataset("val", IMG_SIZE)
-
-with torch.no_grad():
-    for i in range(3):
-        img_tensor, true_mask = sample_dataset[i * 10]
-        output    = model(img_tensor.unsqueeze(0).to(DEVICE))["out"]
-        pred_mask = output.argmax(dim=1).squeeze().cpu().numpy()
-
-        img_show = img_tensor.numpy().transpose(1, 2, 0)
-        img_show = (img_show * [0.229, 0.224, 0.225] + [0.485, 0.456, 0.406]).clip(0, 1)
-
-        def mask_to_rgb(mask):
-            rgb = np.zeros((*mask.shape, 3), dtype=np.uint8)
-            for cls, color in COLOR_MAP.items():
-                rgb[mask == cls] = color
-            return rgb
-
-        axes[i][0].imshow(img_show)
-        axes[i][0].set_title("Input Image")
-        axes[i][0].axis("off")
-        axes[i][1].imshow(mask_to_rgb(true_mask.numpy()))
-        axes[i][1].set_title("Ground Truth")
-        axes[i][1].axis("off")
-        axes[i][2].imshow(mask_to_rgb(pred_mask))
-        axes[i][2]
+print("Stage 2 Complete. Best mIoU: " + str(round(best_iou, 4)))
