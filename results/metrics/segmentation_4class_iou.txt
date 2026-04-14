@@ -1,0 +1,8 @@
+4-Class Segmentation IoU Breakdown
+========================================
+Background: 0.9048
+Crack: 0.2059
+Corrosion: 0.7682
+Spalling: 0.6994
+mIoU: 0.6446
+Pixel Accuracy: 0.9215
