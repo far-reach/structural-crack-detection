@@ -50,7 +50,7 @@ structural-crack-detection/
 │   └── demo.py       # Demo without trained model
 │
 ├── results/          # Output reports and model checkpoints
-├── data/             # Dataset (download separately — see below)
+├── data/             # Dataset (obtained separately — see below)
 │   ├── Positive/     # Cracked concrete images
 │   └── Negative/     # Intact concrete images
 │
@@ -64,7 +64,7 @@ structural-crack-detection/
 
 ### 1. Install dependencies
 ```bash
-git clone https://github.com/YOUR_USERNAME/structural-crack-detection
+git clone https://github.com/RESTTINPAIN/structural-crack-detection
 cd structural-crack-detection
 pip install -r requirements.txt
 ```
@@ -75,8 +75,8 @@ python src/demo.py
 # Output: results/demo_inspection_report.png
 ```
 
-### 3. Download the dataset
-Download from Kaggle: [Concrete Crack Images for Classification](https://www.kaggle.com/datasets/arunrk7/surface-crack-detection)
+### 3. Get the dataset
+The dataset used in this project is the publicly available *Concrete Crack Images for Classification* dataset by arunrk7, hosted on Kaggle. Users should visit Kaggle and search for this dataset to obtain it through Kaggle's standard distribution.
 
 Place images in:
 ```
