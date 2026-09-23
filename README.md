@@ -2,7 +2,7 @@
 
 **Automated Multi-Class Structural Damage Detection and Segmentation for UAV-Based Infrastructure Inspection Using Deep Learning**
 
-Reference implementation for the paper submitted to *Structures* (Elsevier, 2026).
+Reference implementation for the preprint: [doi.org/10.31224/7685](https://doi.org/10.31224/7685) (engrXiv, 2026, CC BY 4.0).
 
 A three-stage deep learning pipeline for automated structural damage detection, segmentation, and UAV inspection simulation. Targets bridges, offshore platforms, and other civil infrastructure.
 
@@ -137,15 +137,13 @@ Three representative misclassification cases are included to identify targeted i
 
 ## Citation
 
-If you use this code or the pretrained weights in your work, please cite the paper:
+If you use this code or the pretrained weights in your work, please cite the preprint:
 
 ```
 Abtahi, S.F. (2026). Automated Multi-Class Structural Damage Detection and
 Segmentation for UAV-Based Infrastructure Inspection Using Deep Learning.
-Structures. [Manuscript under review.]
+engrXiv. https://doi.org/10.31224/7685
 ```
-
-Citation will be updated upon acceptance.
 
 ---
 
