@@ -1,10 +1,16 @@
+# Versions used for the v2.0 results (Python 3.14). CPU-only PyTorch works; a GPU only shortens training.
 torch==2.11.0
-torchvision
-numpy
-Pillow
-matplotlib
-seaborn
-scikit-learn
-opencv-python
+torchvision==0.26.0
+timm==1.0.31
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+Pillow==13.0.0
+matplotlib==3.11.2
+seaborn==0.13.2
+opencv-python==5.1.0.95
+onnx==1.23.2
+onnxruntime==1.32.0
 tqdm
 kaggle
+pytest

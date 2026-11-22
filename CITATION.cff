@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "structural-crack-detection: vision screening, ultrasonic confirmation and swarm simulation for structural inspection"
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/far-reach/structural-crack-detection"
+authors:
+  - family-names: Abtahi
+    given-names: Seyed Farhad
+    orcid: "https://orcid.org/0009-0007-8865-2300"
+    affiliation: "Independent Researcher, Istanbul, Türkiye"
+references:
+  - type: article
+    title: "Automated Multi-Class Structural Damage Detection and Segmentation for Unmanned Aerial Vehicle-Based Infrastructure Inspection Using Deep Learning"
+    authors:
+      - family-names: Abtahi
+        given-names: Seyed Farhad
+    year: 2026
+    doi: 10.31224/7685
