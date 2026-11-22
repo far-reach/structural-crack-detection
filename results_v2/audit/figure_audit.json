@@ -1,0 +1,124 @@
+{
+ "failure_published_logic": [
+  {
+   "file": "crack/004-127.jpg",
+   "true": "crack",
+   "shown_pred": "intact",
+   "actual_pred": "crack",
+   "conf": 87.6
+  },
+  {
+   "file": "intact/001-142.jpg",
+   "true": "intact",
+   "shown_pred": "corrosion",
+   "actual_pred": "intact",
+   "conf": 86.4
+  },
+  {
+   "file": "corrosion/563_0_0.png",
+   "true": "corrosion",
+   "shown_pred": "crack",
+   "actual_pred": "corrosion",
+   "conf": 99.1
+  }
+ ],
+ "failure_corrected": [
+  {
+   "file": "crack/006-113.jpg",
+   "true": "crack",
+   "shown_pred": "intact",
+   "actual_pred": "intact",
+   "conf": 55.0
+  },
+  {
+   "file": "intact/013-153.jpg",
+   "true": "intact",
+   "shown_pred": "crack",
+   "actual_pred": "crack",
+   "conf": 53.5
+  },
+  {
+   "file": "corrosion/563_768_768.png",
+   "true": "corrosion",
+   "shown_pred": "spalling",
+   "actual_pred": "spalling",
+   "conf": 97.8
+  }
+ ],
+ "gradcam_published_logic": [
+  {
+   "file": "crack/004-127.jpg",
+   "true": "crack",
+   "shown_pred": "intact",
+   "actual_pred": "crack",
+   "conf": 87.6,
+   "shown_as": "Wrong (fallback)",
+   "actually_correct": true
+  },
+  {
+   "file": "intact/013-153.jpg",
+   "true": "intact",
+   "shown_pred": "intact",
+   "actual_pred": "crack",
+   "conf": 53.5,
+   "shown_as": "Correct",
+   "actually_correct": false
+  },
+  {
+   "file": "corrosion/580_512_512.png",
+   "true": "corrosion",
+   "shown_pred": "corrosion",
+   "actual_pred": "intact",
+   "conf": 68.7,
+   "shown_as": "Correct",
+   "actually_correct": false
+  },
+  {
+   "file": "spalling/573_0_0.png",
+   "true": "spalling",
+   "shown_pred": "spalling",
+   "actual_pred": "spalling",
+   "conf": 100.0,
+   "shown_as": "Correct",
+   "actually_correct": true
+  }
+ ],
+ "gradcam_corrected": [
+  {
+   "file": "crack/004-127.jpg",
+   "true": "crack",
+   "shown_pred": "crack",
+   "actual_pred": "crack",
+   "conf": 87.6,
+   "shown_as": "Correct",
+   "actually_correct": true
+  },
+  {
+   "file": "intact/001-142.jpg",
+   "true": "intact",
+   "shown_pred": "intact",
+   "actual_pred": "intact",
+   "conf": 86.4,
+   "shown_as": "Correct",
+   "actually_correct": true
+  },
+  {
+   "file": "corrosion/563_0_0.png",
+   "true": "corrosion",
+   "shown_pred": "corrosion",
+   "actual_pred": "corrosion",
+   "conf": 99.1,
+   "shown_as": "Correct",
+   "actually_correct": true
+  },
+  {
+   "file": "spalling/573_0_0.png",
+   "true": "spalling",
+   "shown_pred": "spalling",
+   "actual_pred": "spalling",
+   "conf": 100.0,
+   "shown_as": "Correct",
+   "actually_correct": true
+  }
+ ]
+}

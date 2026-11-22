@@ -1,0 +1,346 @@
+{
+ "device": "cpu",
+ "classes": [
+  "corrosion",
+  "crack",
+  "intact",
+  "spalling"
+ ],
+ "all_1600": {
+  "acc": 0.856875,
+  "cm": [
+   [
+    163,
+    3,
+    4,
+    30
+   ],
+   [
+    0,
+    466,
+    134,
+    0
+   ],
+   [
+    0,
+    41,
+    559,
+    0
+   ],
+   [
+    16,
+    1,
+    0,
+    183
+   ]
+  ]
+ },
+ "originals_only": {
+  "n": 1364,
+  "acc": 0.8541055718475073,
+  "cm": [
+   [
+    111,
+    1,
+    1,
+    15
+   ],
+   [
+    0,
+    466,
+    134,
+    0
+   ],
+   [
+    0,
+    41,
+    559,
+    0
+   ],
+   [
+    7,
+    0,
+    0,
+    29
+   ]
+  ]
+ },
+ "augmented_only": {
+  "n": 236,
+  "acc": 0.8728813559322034
+ },
+ "stage3_frames": [
+  {
+   "row": 0,
+   "col": 0,
+   "file": "crack/009-56.jpg",
+   "true": "crack",
+   "published_label": "intact",
+   "published_conf": 58.5,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 81.1
+  },
+  {
+   "row": 0,
+   "col": 1,
+   "file": "corrosion/563_256_768.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 99.8,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 100.0
+  },
+  {
+   "row": 0,
+   "col": 2,
+   "file": "spalling/604_0_256.png",
+   "true": "spalling",
+   "published_label": "spalling",
+   "published_conf": 83.2,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 82.1
+  },
+  {
+   "row": 0,
+   "col": 3,
+   "file": "corrosion/563_256_512.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 52.4,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 99.7
+  },
+  {
+   "row": 0,
+   "col": 4,
+   "file": "crack/008-145.jpg",
+   "true": "crack",
+   "published_label": "corrosion",
+   "published_conf": 98.6,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 95.5
+  },
+  {
+   "row": 1,
+   "col": 4,
+   "file": "intact/004-188.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 82.0,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 92.2
+  },
+  {
+   "row": 1,
+   "col": 3,
+   "file": "intact/003-5.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 93.5,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 98.6
+  },
+  {
+   "row": 1,
+   "col": 2,
+   "file": "spalling/573_0_256.png",
+   "true": "spalling",
+   "published_label": "spalling",
+   "published_conf": 51.8,
+   "pred_index": 3,
+   "correct_label": "spalling",
+   "wrong_list_label": "spalling",
+   "conf": 80.8
+  },
+  {
+   "row": 1,
+   "col": 1,
+   "file": "crack/005-82.jpg",
+   "true": "crack",
+   "published_label": "intact",
+   "published_conf": 89.8,
+   "pred_index": 1,
+   "correct_label": "crack",
+   "wrong_list_label": "intact",
+   "conf": 97.0
+  },
+  {
+   "row": 1,
+   "col": 0,
+   "file": "corrosion/563_256_0.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 100.0,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 98.7
+  },
+  {
+   "row": 2,
+   "col": 0,
+   "file": "intact/003-54.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 98.0,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 99.4
+  },
+  {
+   "row": 2,
+   "col": 1,
+   "file": "crack/007-83.jpg",
+   "true": "crack",
+   "published_label": "corrosion",
+   "published_conf": 87.8,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 77.9
+  },
+  {
+   "row": 2,
+   "col": 2,
+   "file": "corrosion/563_512_256.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 100.0,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 100.0
+  },
+  {
+   "row": 2,
+   "col": 3,
+   "file": "intact/001-47.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 79.7,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 96.8
+  },
+  {
+   "row": 2,
+   "col": 4,
+   "file": "corrosion/563_0_256.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 99.9,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 100.0
+  },
+  {
+   "row": 3,
+   "col": 4,
+   "file": "crack/005-63.jpg",
+   "true": "crack",
+   "published_label": "intact",
+   "published_conf": 98.7,
+   "pred_index": 1,
+   "correct_label": "crack",
+   "wrong_list_label": "intact",
+   "conf": 96.8
+  },
+  {
+   "row": 3,
+   "col": 3,
+   "file": "intact/001-142.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 62.4,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 86.4
+  },
+  {
+   "row": 3,
+   "col": 2,
+   "file": "crack/004-127.jpg",
+   "true": "crack",
+   "published_label": "intact",
+   "published_conf": 77.4,
+   "pred_index": 1,
+   "correct_label": "crack",
+   "wrong_list_label": "intact",
+   "conf": 87.6
+  },
+  {
+   "row": 3,
+   "col": 1,
+   "file": "intact/001-185.jpg",
+   "true": "intact",
+   "published_label": "corrosion",
+   "published_conf": 97.7,
+   "pred_index": 2,
+   "correct_label": "intact",
+   "wrong_list_label": "corrosion",
+   "conf": 98.8
+  },
+  {
+   "row": 3,
+   "col": 0,
+   "file": "corrosion/563_0_512.png",
+   "true": "corrosion",
+   "published_label": "crack",
+   "published_conf": 93.2,
+   "pred_index": 0,
+   "correct_label": "corrosion",
+   "wrong_list_label": "crack",
+   "conf": 69.3
+  }
+ ],
+ "stage3_summary": {
+  "frames_where_wrong_list_reproduces_published_label": 18,
+  "max_abs_conf_diff_vs_published": 47.300000000000004,
+  "true_damaged": 14,
+  "true_intact": 6,
+  "damaged_flagged_as_damaged": 11,
+  "damaged_with_correct_class": 10,
+  "intact_false_alarms": 0,
+  "exact_class_correct": 16,
+  "published_exact_class_correct": 2,
+  "distinct_parent_images": {
+   "corrosion": [
+    "563"
+   ],
+   "crack": [
+    "004",
+    "005",
+    "007",
+    "008",
+    "009"
+   ],
+   "intact": [
+    "001",
+    "003",
+    "004"
+   ],
+   "spalling": [
+    "573",
+    "604"
+   ]
+  }
+ }
+}
