@@ -156,7 +156,7 @@ def visualize_single(result, save_path=None):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     axes[1].text(5, 0.4, f"Analysis: {ts}", color="#666688",
                  fontsize=8, ha="center", va="center")
-    axes[1].text(5, 0.1, "AI-Powered Structural Inspection System",
+    axes[1].text(5, 0.1, "Deep-learning-based Structural Inspection System",
                  color="#444466", fontsize=7, ha="center", va="center")
 
     plt.suptitle("Structural Health Monitoring — Crack Detection Report",

@@ -80,7 +80,7 @@ def generate_demo_report(output_dir="./results"):
 
     print("\n" + "="*60)
     print("  STRUCTURAL CRACK DETECTION SYSTEM — DEMO")
-    print("  AI-Powered Infrastructure Inspection")
+    print("  Deep-learning-based Infrastructure Inspection")
     print("="*60 + "\n")
 
     # ── Main inspection dashboard ──────────────────────────────────
@@ -91,7 +91,7 @@ def generate_demo_report(output_dir="./results"):
     # Title
     fig.text(0.5, 0.97, "STRUCTURAL HEALTH MONITORING SYSTEM",
              ha="center", va="top", color="white", fontsize=18, fontweight="bold")
-    fig.text(0.5, 0.945, "AI-Powered Crack Detection | Offshore & Civil Infrastructure",
+    fig.text(0.5, 0.945, "Deep-learning-based Crack Detection | Offshore & Civil Infrastructure",
              ha="center", va="top", color="#8888aa", fontsize=11)
     fig.text(0.5, 0.925, f"Inspection Report — {datetime.now().strftime('%B %d, %Y  %H:%M UTC')}",
              ha="center", va="top", color="#666688", fontsize=9)
