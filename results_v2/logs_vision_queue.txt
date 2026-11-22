@@ -1,0 +1,83 @@
+=== experiments/train_codebrim.py --model convnext_tiny --epochs 30 --lr 2e-4 --seed 1
+convnext_tiny_r224_s1: 27.824 M params, res 224, device cuda
+TEST multi-target acc 0.8054 macro F1 0.889
+=== experiments/train_codebrim.py --model convnext_tiny --epochs 30 --lr 2e-4 --seed 2
+convnext_tiny_r224_s2: 27.824 M params, res 224, device cuda
+TEST multi-target acc 0.7896 macro F1 0.8801
+=== experiments/train_codebrim.py --model resnet50 --epochs 30 --lr 3e-4 --seed 0
+resnet50_r224_s0: 23.518 M params, res 224, device cuda
+TEST multi-target acc 0.7405 macro F1 0.8629
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 0
+mobilenetv3_small_100_r224_s0: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.7722 macro F1 0.8748
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 0 --teacher convnext_tiny_r224_s0
+mobilenetv3_small_100_r224_kd-convnext_tiny_r224_s0_s0: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.788 macro F1 0.8767
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 0
+nano32_r128_s0: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.7073 macro F1 0.827
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 0 --teacher convnext_tiny_r224_s0
+nano32_r128_kd-convnext_tiny_r224_s0_s0: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.6915 macro F1 0.8158
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 0
+nano16_r96_s0: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6835 macro F1 0.7984
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 0 --teacher convnext_tiny_r224_s0
+nano16_r96_kd-convnext_tiny_r224_s0_s0: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6772 macro F1 0.7885
+=== experiments/train_codebrim.py --model resnet50 --epochs 30 --lr 3e-4 --seed 1
+resnet50_r224_s1: 23.518 M params, res 224, device cuda
+TEST multi-target acc 0.769 macro F1 0.8716
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 1
+mobilenetv3_small_100_r224_s1: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.7595 macro F1 0.8613
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 1 --teacher convnext_tiny_r224_s1
+mobilenetv3_small_100_r224_kd-convnext_tiny_r224_s1_s1: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.7864 macro F1 0.8781
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 1
+nano32_r128_s1: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.6741 macro F1 0.8028
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 1 --teacher convnext_tiny_r224_s1
+nano32_r128_kd-convnext_tiny_r224_s1_s1: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.6994 macro F1 0.8102
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 1
+nano16_r96_s1: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6424 macro F1 0.7769
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 1 --teacher convnext_tiny_r224_s1
+nano16_r96_kd-convnext_tiny_r224_s1_s1: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6772 macro F1 0.794
+=== experiments/train_codebrim.py --model resnet50 --epochs 30 --lr 3e-4 --seed 2
+resnet50_r224_s2: 23.518 M params, res 224, device cuda
+TEST multi-target acc 0.7658 macro F1 0.8631
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 2
+mobilenetv3_small_100_r224_s2: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.7753 macro F1 0.8752
+=== experiments/train_codebrim.py --model mobilenetv3_small_100 --epochs 40 --lr 1e-3 --seed 2 --teacher convnext_tiny_r224_s2
+mobilenetv3_small_100_r224_kd-convnext_tiny_r224_s2_s2: 1.523 M params, res 224, device cuda
+TEST multi-target acc 0.8038 macro F1 0.8826
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 2
+nano32_r128_s2: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.7136 macro F1 0.8221
+=== experiments/train_codebrim.py --model nano32 --epochs 60 --lr 3e-3 --seed 2 --teacher convnext_tiny_r224_s2
+nano32_r128_kd-convnext_tiny_r224_s2_s2: 0.140 M params, res 128, device cuda
+TEST multi-target acc 0.7089 macro F1 0.8081
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 2
+nano16_r96_s2: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6788 macro F1 0.7891
+=== experiments/train_codebrim.py --model nano16 --epochs 60 --lr 3e-3 --seed 2 --teacher convnext_tiny_r224_s2
+nano16_r96_kd-convnext_tiny_r224_s2_s2: 0.038 M params, res 96, device cuda
+TEST multi-target acc 0.6788 macro F1 0.7992
+QUEUE_A_DONE
+=== experiments/leak_study.py --seeds 0 1 2
+tile protocol 6818 1600
+seed 0: grouped protocol 6216 train, 1551 val, classes [267, 600, 600, 84] {'train_parents': 184, 'val_parents': 46}
+  tile_model_on_tile_val: acc 0.8419 macroF1 0.8266 sdnet 0.8575 raid 0.7950
+  grouped_model_on_grouped_val: acc 0.8285 macroF1 0.8048 sdnet 0.8283 raid 0.8291
+seed 1: grouped protocol 6216 train, 1551 val, classes [267, 600, 600, 84] {'train_parents': 184, 'val_parents': 46}
+  tile_model_on_tile_val: acc 0.8263 macroF1 0.8186 sdnet 0.8350 raid 0.8000
+  grouped_model_on_grouped_val: acc 0.8504 macroF1 0.8360 sdnet 0.8475 raid 0.8604
+seed 2: grouped protocol 6216 train, 1551 val, classes [267, 600, 600, 84] {'train_parents': 184, 'val_parents': 46}
+  tile_model_on_tile_val: acc 0.8400 macroF1 0.8323 sdnet 0.8492 raid 0.8125
+  grouped_model_on_grouped_val: acc 0.8162 macroF1 0.7977 sdnet 0.8150 raid 0.8205
+{'tile_model_on_tile_val.acc': 0.836, 'tile_model_on_tile_val.macro_f1': 0.8258, 'tile_model_on_tile_val.acc_sdnet_source': 0.8472, 'tile_model_on_tile_val.acc_raidathmane_source': 0.8025, 'grouped_model_on_grouped_val.acc': 0.8317, 'grouped_model_on_grouped_val.macro_f1': 0.8128, 'grouped_model_on_grouped_val.acc_sdnet_source': 0.8303, 'grouped_model_on_grouped_val.acc_raidathmane_source': 0.8367}
+QUEUE_DONE
