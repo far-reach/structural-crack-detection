@@ -173,17 +173,17 @@ def fig_swarm(sw):
         ax[0].plot(ns, t, "o-", ms=3, color=col, label=f"loss per sortie {int(p_loss * 100)}%")
     ax[0].plot(ns, [sw["coverage_scaling"]["loss0.0_n1"]["time_min"]["mean"] / n for n in ns], ":", color=C["grey"], label="ideal 1/N")
     ax[0].set_xlabel("number of scouts"), ax[0].set_ylabel("tier 1 mission time (min)"), ax[0].set_yscale("log"), ax[0].set_xscale("log")
-    ax[0].set_xticks(ns), ax[0].set_xticklabels(ns), ax[0].minorticks_off()
+    ax[0].set_xticks([1, 2, 4, 8, 16]), ax[0].set_xticklabels([1, 2, 4, 8, 16]), ax[0].minorticks_off()
     ax[0].set_yticks([2, 5, 10, 20, 30]), ax[0].set_yticklabels([2, 5, 10, 20, 30]), ax[0].legend(frameon=False, fontsize=5.5, loc="upper right")
     pol = sw["confirm_policies"]
     names = {"vision_only": ("vision only", (4, 3)), "random_same_budget": ("random, same budget", (5, -2)),
              "flagged": ("flagged", (5, -9)), "flagged_plus_10pct_audit": ("flagged + 10% audit", (5, 4)),
-             "exhaustive": ("exhaustive", (-38, -11)), "oracle_surface_truth": ("perfect scout", (-30, 9))}
+             "exhaustive": ("exhaustive", (-38, -11)), "oracle_surface_truth": ("perfect scout", (-22, 12))}
     for k, (lab, off) in names.items():
         r = pol[k]
         ax[1].errorbar(r["contacts"]["mean"], 100 * r["hidden_recall"]["mean"], yerr=100 * r["hidden_recall"]["std"], fmt="o", ms=4, capsize=2)
         ax[1].annotate(lab, (r["contacts"]["mean"], 100 * r["hidden_recall"]["mean"]), textcoords="offset points", xytext=off, fontsize=6)
-    ax[1].set_xlabel("ultrasonic contacts per mission"), ax[1].set_ylabel("hidden-defect recall (%)"), ax[1].set_ylim(-5, 105)
+    ax[1].set_xlabel("ultrasonic contacts per mission"), ax[1].set_ylabel("hidden-defect recall (%)"), ax[1].set_ylim(-5, 110), ax[1].set_xlim(-120, 1650)
     noise = sw["sensitivity"]["ut_noise"]
     xs = sorted(float(k) for k in noise)
     for k, lab, col in (("flagged", "flagged", C["swarm"]), ("exhaustive", "exhaustive", C["ut"])):
