@@ -141,24 +141,37 @@ def fig_ultrasonic(ut_tag):
 
     wave, rot = ut_tag.split("_Rot")
     p = np.load(CACHE / "preds" / f"ascan_{ut_tag}.npz")
-    fig, ax = plt.subplots(3, 3, figsize=(7.2, 6.0), gridspec_kw={"height_ratios": [1.25, 1, 1]})
+    fig = plt.figure(figsize=(7.2, 6.2))
+    gs = fig.add_gridspec(3, 4, width_ratios=[1, 1, 1, 0.05], height_ratios=[1.2, 1, 1],
+                          hspace=0.32, wspace=0.22, left=0.11, right=0.92, top=0.94, bottom=0.08)
+    ax = np.array([[fig.add_subplot(gs[r, c]) for c in range(3)] for r in range(3)])
+    names = {"pk050": "Pk050 (plain)", "pk266": "Pk266 (tendon ducts)", "pk401": "Pk401 (foam cuboids)"}
     for j, s in enumerate(("pk050", "pk266", "pk401")):
         env = U.envelope(U.bandpass(U.load_volume(s, wave, rot), wave))
         row = 50 if s == "pk401" else 40
         b = env[:, row, :1700]
         ax[0, j].imshow((b / (b.max(1, keepdims=True) + 1e-9)).T ** 0.5, aspect="auto", cmap="magma", extent=[0, 2000, 850, 0])
-        ax[0, j].set_title(f"{s.replace('pk', 'Pk')}: B-scan at Y = {row * 10} mm", fontsize=8)
-        ax[0, j].set_xlabel("X (mm)")
+        ax[0, j].set_title(f"{names[s]}\nB-scan at Y = {row * 10} mm", fontsize=8)
         lab, _ = U.object_labels(s)
         ax[1, j].imshow(np.where(lab.T == -1, 0.5, lab.T), aspect="auto", cmap="Greys", vmin=0, vmax=1, extent=[0, 2000, 800, 0])
-        ax[1, j].set_title("ground truth (grey: excluded)", fontsize=8)
+        if not (lab == 1).any():
+            ax[1, j].text(1000, 400, "no embedded objects", ha="center", va="center", fontsize=7, color=C["grey"])
         pm = np.where(p[f"valid_{s}"], p[f"p_{s}"], np.nan)
         im = ax[2, j].imshow(pm.T, aspect="auto", cmap="viridis", vmin=0, vmax=1, extent=[0, 2000, 800, 0])
-        ax[2, j].set_title("network output", fontsize=8)
-        ax[2, j].set_xlabel("X (mm)")
-    ax[0, 0].set_ylabel("time (µs)"), ax[1, 0].set_ylabel("Y (mm)"), ax[2, 0].set_ylabel("Y (mm)")
-    fig.tight_layout()
-    fig.colorbar(im, ax=ax[2, :], shrink=0.8, label="P(embedded object)", pad=0.02)
+        for r in range(3):
+            ax[r, j].set_xticks([0, 500, 1000, 1500, 2000])
+            ax[r, j].tick_params(labelsize=7)
+            if r < 2:
+                ax[r, j].set_xticklabels([])
+            if j > 0:
+                ax[r, j].set_yticklabels([])
+        ax[2, j].set_xlabel("X (mm)", fontsize=8)
+    ax[0, 0].set_ylabel("B-scan\ntime (µs)", fontsize=8)
+    ax[1, 0].set_ylabel("ground truth\nY (mm)", fontsize=8)
+    ax[2, 0].set_ylabel("network output\nY (mm)", fontsize=8)
+    ax[1, 2].text(2000, -40, "black: object   grey: excluded", ha="right", va="bottom", fontsize=6.5, color=C["grey"])
+    cb = fig.colorbar(im, cax=fig.add_subplot(gs[2, 3]))
+    cb.set_label("P(embedded object)", fontsize=7), cb.ax.tick_params(labelsize=7)
     fig.savefig(FIG / "fig4_ultrasonic.png")
     plt.close(fig)
 
