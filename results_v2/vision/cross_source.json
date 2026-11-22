@@ -1,0 +1,151 @@
+{
+ "manifest": {
+  "time": "2026-11-22 01:39:43",
+  "git": "1ceb5f472b521d7cc2408a75f191d04d718efa8b+dirty",
+  "config": {
+   "tags": [
+    "convnext_tiny_r224_s0",
+    "resnet50_r224_s0",
+    "mobilenetv3_small_100_r224_s0",
+    "mobilenetv3_small_100_r224_kd-convnext_tiny_r224_s0_s0",
+    "nano32_r128_s0",
+    "nano32_r128_kd-convnext_tiny_r224_s0_s0",
+    "nano16_r96_s0",
+    "nano16_r96_kd-convnext_tiny_r224_s0_s0"
+   ],
+   "device": "cuda"
+  },
+  "config_sha1": "62d05ba10789",
+  "seed": null,
+  "versions": {
+   "python": "3.14.3",
+   "numpy": "2.5.4",
+   "torch": "2.11.0+cu128",
+   "torchvision": "0.26.0+cu128",
+   "timm": "1.0.31",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "onnxruntime": "1.32.0"
+  },
+  "hardware": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD | Windows 11 | NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+ },
+ "result": {
+  "A_codebrim_models_on_sdnet_raidathmane": {
+   "convnext_tiny_r224_s0": {
+    "false_alarm_rate_intact": 0.10166666666666667,
+    "flag_recall_corrosion": 0.7715355805243446,
+    "class_recall_corrosion": 0.39325842696629215,
+    "flag_recall_crack": 0.5366666666666666,
+    "class_recall_crack": 0.49666666666666665,
+    "flag_recall_spalling": 0.8571428571428571,
+    "class_recall_spalling": 0.39285714285714285,
+    "damage_recall": 0.6309148264984227,
+    "balanced_acc_damage_vs_intact": 0.764624079915878
+   },
+   "resnet50_r224_s0": {
+    "false_alarm_rate_intact": 0.21333333333333335,
+    "flag_recall_corrosion": 0.8726591760299626,
+    "class_recall_corrosion": 0.44569288389513106,
+    "flag_recall_crack": 0.7,
+    "class_recall_crack": 0.6066666666666667,
+    "flag_recall_spalling": 0.9523809523809523,
+    "class_recall_spalling": 0.5238095238095238,
+    "damage_recall": 0.7707676130389064,
+    "balanced_acc_damage_vs_intact": 0.7787171398527866
+   },
+   "mobilenetv3_small_100_r224_s0": {
+    "false_alarm_rate_intact": 0.12166666666666667,
+    "flag_recall_corrosion": 0.8089887640449438,
+    "class_recall_corrosion": 0.43820224719101125,
+    "flag_recall_crack": 0.4583333333333333,
+    "class_recall_crack": 0.3883333333333333,
+    "flag_recall_spalling": 0.9047619047619048,
+    "class_recall_spalling": 0.30952380952380953,
+    "damage_recall": 0.5962145110410094,
+    "balanced_acc_damage_vs_intact": 0.7372739221871714
+   },
+   "mobilenetv3_small_100_r224_kd-convnext_tiny_r224_s0_s0": {
+    "false_alarm_rate_intact": 0.18833333333333332,
+    "flag_recall_corrosion": 0.846441947565543,
+    "class_recall_corrosion": 0.41947565543071164,
+    "flag_recall_crack": 0.5316666666666666,
+    "class_recall_crack": 0.475,
+    "flag_recall_spalling": 0.9047619047619048,
+    "class_recall_spalling": 0.42857142857142855,
+    "damage_recall": 0.6529968454258676,
+    "balanced_acc_damage_vs_intact": 0.7323317560462671
+   },
+   "nano32_r128_s0": {
+    "false_alarm_rate_intact": 0.23666666666666666,
+    "flag_recall_corrosion": 0.8352059925093633,
+    "class_recall_corrosion": 0.3970037453183521,
+    "flag_recall_crack": 0.42333333333333334,
+    "class_recall_crack": 0.34833333333333333,
+    "flag_recall_spalling": 0.8095238095238095,
+    "class_recall_spalling": 0.5952380952380952,
+    "damage_recall": 0.573080967402734,
+    "balanced_acc_damage_vs_intact": 0.6682071503680336
+   },
+   "nano32_r128_kd-convnext_tiny_r224_s0_s0": {
+    "false_alarm_rate_intact": 0.235,
+    "flag_recall_corrosion": 0.8352059925093633,
+    "class_recall_corrosion": 0.4232209737827715,
+    "flag_recall_crack": 0.405,
+    "class_recall_crack": 0.3,
+    "flag_recall_spalling": 0.8333333333333334,
+    "class_recall_spalling": 0.5595238095238095,
+    "damage_recall": 0.5636172450052577,
+    "balanced_acc_damage_vs_intact": 0.6643086225026289
+   },
+   "nano16_r96_s0": {
+    "false_alarm_rate_intact": 0.29833333333333334,
+    "flag_recall_corrosion": 0.7940074906367042,
+    "class_recall_corrosion": 0.3782771535580524,
+    "flag_recall_crack": 0.4066666666666667,
+    "class_recall_crack": 0.28,
+    "flag_recall_spalling": 0.75,
+    "class_recall_spalling": 0.5119047619047619,
+    "damage_recall": 0.5457413249211357,
+    "balanced_acc_damage_vs_intact": 0.6237039957939012
+   },
+   "nano16_r96_kd-convnext_tiny_r224_s0_s0": {
+    "false_alarm_rate_intact": 0.33166666666666667,
+    "flag_recall_corrosion": 0.7677902621722846,
+    "class_recall_corrosion": 0.3707865168539326,
+    "flag_recall_crack": 0.3983333333333333,
+    "class_recall_crack": 0.2733333333333333,
+    "flag_recall_spalling": 0.8333333333333334,
+    "class_recall_spalling": 0.6190476190476191,
+    "damage_recall": 0.5404837013669821,
+    "balanced_acc_damage_vs_intact": 0.6044085173501577
+   }
+  },
+  "n_external": {
+   "corrosion": 267,
+   "crack": 600,
+   "intact": 600,
+   "spalling": 84
+  },
+  "B_v1_model_on_codebrim_test": {
+   "intact_recall_on_background": 0.19480519480519481,
+   "n_background": 154,
+   "recall_corrosion": 0.16363636363636364,
+   "flagged_as_damage_corrosion": 0.9818181818181818,
+   "n_corrosion": 55,
+   "recall_crack": 0.16535433070866143,
+   "flagged_as_damage_crack": 0.9606299212598425,
+   "n_crack": 127,
+   "recall_spalling": 0.17647058823529413,
+   "flagged_as_damage_spalling": 1.0,
+   "n_spalling": 17,
+   "damage_recall_all_defect_crops": 0.9728033472803347,
+   "balanced_acc_damage_vs_intact": 0.5838042710427648,
+   "prediction_share": {
+    "corrosion": 0.5490506329113924,
+    "crack": 0.04272151898734177,
+    "intact": 0.0680379746835443,
+    "spalling": 0.3401898734177215
+   }
+  }
+ }
+}

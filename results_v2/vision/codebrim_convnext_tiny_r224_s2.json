@@ -1,0 +1,275 @@
+{
+ "manifest": {
+  "time": "2026-11-22 01:14:37",
+  "git": "1ceb5f472b521d7cc2408a75f191d04d718efa8b+dirty",
+  "config": {
+   "model": "convnext_tiny",
+   "epochs": 30,
+   "lr": 0.0002,
+   "batch": 64,
+   "seed": 2,
+   "res": 224,
+   "teacher": "",
+   "kd_alpha": 0.5,
+   "no_pretrain": false,
+   "device": "cuda"
+  },
+  "config_sha1": "b331e1e55d98",
+  "seed": 2,
+  "versions": {
+   "python": "3.14.3",
+   "numpy": "2.5.4",
+   "torch": "2.11.0+cu128",
+   "torchvision": "0.26.0+cu128",
+   "timm": "1.0.31",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "onnxruntime": "1.32.0"
+  },
+  "hardware": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD | Windows 11 | NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+ },
+ "result": {
+  "tag": "convnext_tiny_r224_s2",
+  "params": 27823973,
+  "history": [
+   {
+    "epoch": 1,
+    "loss": 0.2862928359962926,
+    "val_multi_target_acc": 0.5616883116883117
+   },
+   {
+    "epoch": 2,
+    "loss": 0.17631363440858255,
+    "val_multi_target_acc": 0.6964285714285714
+   },
+   {
+    "epoch": 3,
+    "loss": 0.16142501261564765,
+    "val_multi_target_acc": 0.702922077922078
+   },
+   {
+    "epoch": 4,
+    "loss": 0.14444839585535596,
+    "val_multi_target_acc": 0.7045454545454546
+   },
+   {
+    "epoch": 5,
+    "loss": 0.11974787439155106,
+    "val_multi_target_acc": 0.7305194805194806
+   },
+   {
+    "epoch": 6,
+    "loss": 0.11097812077196517,
+    "val_multi_target_acc": 0.75
+   },
+   {
+    "epoch": 7,
+    "loss": 0.1004334615156202,
+    "val_multi_target_acc": 0.7386363636363636
+   },
+   {
+    "epoch": 8,
+    "loss": 0.09309761893778744,
+    "val_multi_target_acc": 0.7402597402597403
+   },
+   {
+    "epoch": 9,
+    "loss": 0.08381080225405127,
+    "val_multi_target_acc": 0.7548701298701299
+   },
+   {
+    "epoch": 10,
+    "loss": 0.07683416391437006,
+    "val_multi_target_acc": 0.7402597402597403
+   },
+   {
+    "epoch": 11,
+    "loss": 0.06832203718990383,
+    "val_multi_target_acc": 0.702922077922078
+   },
+   {
+    "epoch": 12,
+    "loss": 0.06290241166727968,
+    "val_multi_target_acc": 0.775974025974026
+   },
+   {
+    "epoch": 13,
+    "loss": 0.05279869499551778,
+    "val_multi_target_acc": 0.7353896103896104
+   },
+   {
+    "epoch": 14,
+    "loss": 0.04401010614220459,
+    "val_multi_target_acc": 0.7353896103896104
+   },
+   {
+    "epoch": 15,
+    "loss": 0.03857956311232088,
+    "val_multi_target_acc": 0.7516233766233766
+   },
+   {
+    "epoch": 16,
+    "loss": 0.03377056624371522,
+    "val_multi_target_acc": 0.7694805194805194
+   },
+   {
+    "epoch": 17,
+    "loss": 0.025771240929676458,
+    "val_multi_target_acc": 0.7402597402597403
+   },
+   {
+    "epoch": 18,
+    "loss": 0.021874051086954994,
+    "val_multi_target_acc": 0.7646103896103896
+   },
+   {
+    "epoch": 19,
+    "loss": 0.016748306424458428,
+    "val_multi_target_acc": 0.7613636363636364
+   },
+   {
+    "epoch": 20,
+    "loss": 0.013433218458759607,
+    "val_multi_target_acc": 0.75
+   },
+   {
+    "epoch": 21,
+    "loss": 0.011000434952179467,
+    "val_multi_target_acc": 0.7678571428571429
+   },
+   {
+    "epoch": 22,
+    "loss": 0.009692946681752801,
+    "val_multi_target_acc": 0.762987012987013
+   },
+   {
+    "epoch": 23,
+    "loss": 0.0066639019313526554,
+    "val_multi_target_acc": 0.7743506493506493
+   },
+   {
+    "epoch": 24,
+    "loss": 0.005598797437522818,
+    "val_multi_target_acc": 0.7727272727272727
+   },
+   {
+    "epoch": 25,
+    "loss": 0.004252829831577653,
+    "val_multi_target_acc": 0.7711038961038961
+   },
+   {
+    "epoch": 26,
+    "loss": 0.0036310353117538522,
+    "val_multi_target_acc": 0.775974025974026
+   },
+   {
+    "epoch": 27,
+    "loss": 0.0032824119783495323,
+    "val_multi_target_acc": 0.7711038961038961
+   },
+   {
+    "epoch": 28,
+    "loss": 0.002716590112679186,
+    "val_multi_target_acc": 0.7743506493506493
+   },
+   {
+    "epoch": 29,
+    "loss": 0.0028544272844204773,
+    "val_multi_target_acc": 0.7711038961038961
+   },
+   {
+    "epoch": 30,
+    "loss": 0.002786951119110154,
+    "val_multi_target_acc": 0.7727272727272727
+   }
+  ],
+  "val": {
+   "multi_target_acc": 0.775974025974026,
+   "per_class": {
+    "Crack": {
+     "precision": 0.9242424242424242,
+     "recall": 0.8187919463087249,
+     "f1": 0.8683274021352313,
+     "support": 149,
+     "acc": 0.939935064935065
+    },
+    "Spallation": {
+     "precision": 0.8828125,
+     "recall": 0.8071428571428572,
+     "f1": 0.8432835820895522,
+     "support": 140,
+     "acc": 0.9318181818181818
+    },
+    "Efflorescence": {
+     "precision": 0.9230769230769231,
+     "recall": 0.851063829787234,
+     "f1": 0.8856088560885609,
+     "support": 141,
+     "acc": 0.9496753246753247
+    },
+    "ExposedBars": {
+     "precision": 0.9568345323741008,
+     "recall": 0.9366197183098591,
+     "f1": 0.9466192170818505,
+     "support": 142,
+     "acc": 0.9756493506493507
+    },
+    "CorrosionStain": {
+     "precision": 0.8439716312056738,
+     "recall": 0.815068493150685,
+     "f1": 0.8292682926829269,
+     "support": 146,
+     "acc": 0.9204545454545454
+    }
+   },
+   "macro_f1": 0.8746214700156243,
+   "mean_class_acc": 0.9435064935064934,
+   "damage_recall": 0.9609544468546638,
+   "false_alarm_rate": 0.025806451612903226
+  },
+  "test": {
+   "multi_target_acc": 0.7895569620253164,
+   "per_class": {
+    "Crack": {
+     "precision": 0.9090909090909091,
+     "recall": 0.8666666666666667,
+     "f1": 0.887372013651877,
+     "support": 150,
+     "acc": 0.9477848101265823
+    },
+    "Spallation": {
+     "precision": 0.8896551724137931,
+     "recall": 0.86,
+     "f1": 0.8745762711864407,
+     "support": 150,
+     "acc": 0.9414556962025317
+    },
+    "Efflorescence": {
+     "precision": 0.9312977099236641,
+     "recall": 0.8187919463087249,
+     "f1": 0.8714285714285714,
+     "support": 149,
+     "acc": 0.9430379746835443
+    },
+    "ExposedBars": {
+     "precision": 0.9722222222222222,
+     "recall": 0.9333333333333333,
+     "f1": 0.9523809523809524,
+     "support": 150,
+     "acc": 0.9778481012658228
+    },
+    "CorrosionStain": {
+     "precision": 0.8092105263157895,
+     "recall": 0.82,
+     "f1": 0.8145695364238411,
+     "support": 150,
+     "acc": 0.9113924050632911
+    }
+   },
+   "macro_f1": 0.8800654690143366,
+   "mean_class_acc": 0.9443037974683545,
+   "damage_recall": 0.9309623430962343,
+   "false_alarm_rate": 0.01948051948051948
+  }
+ }
+}

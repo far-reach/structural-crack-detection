@@ -1,0 +1,509 @@
+{
+ "manifest": {
+  "time": "2026-11-22 09:54:16",
+  "git": "unknown",
+  "config": {
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "epochs": 20,
+   "device": "cuda"
+  },
+  "config_sha1": "d7e506ed2bc6",
+  "seed": [
+   0,
+   1,
+   2
+  ],
+  "versions": {
+   "python": "3.14.3",
+   "numpy": "2.5.4",
+   "torch": "2.11.0+cu128",
+   "torchvision": "0.26.0+cu128",
+   "timm": "1.0.31",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "onnxruntime": "1.32.0"
+  },
+  "hardware": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD | Windows 11 | NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+ },
+ "result": {
+  "runs": [
+   {
+    "seed": 0,
+    "grouped_info": {
+     "train_parents": 184,
+     "val_parents": 46
+    },
+    "tile_model_on_tile_val": {
+     "n": 1600,
+     "acc": 0.841875,
+     "macro_f1": 0.8266053892251537,
+     "balanced_acc": 0.8262499999999999,
+     "f1": {
+      "corrosion": 0.7665706051873199,
+      "crack": 0.8442123585726719,
+      "intact": 0.86417791898332,
+      "spalling": 0.8314606741573034
+     },
+     "confusion": [
+      [
+       133,
+       8,
+       0,
+       59
+      ],
+      [
+       0,
+       485,
+       115,
+       0
+      ],
+      [
+       0,
+       55,
+       544,
+       1
+      ],
+      [
+       14,
+       1,
+       0,
+       185
+      ]
+     ],
+     "acc_sdnet_source": 0.8575,
+     "acc_raidathmane_source": 0.795,
+     "acc_originals_only": 0.8475073313782991,
+     "n_augmented": 236
+    },
+    "grouped_model_on_grouped_val": {
+     "n": 1551,
+     "acc": 0.8284977433913604,
+     "macro_f1": 0.804787093500519,
+     "balanced_acc": 0.8192295345104333,
+     "f1": {
+      "corrosion": 0.8828125,
+      "crack": 0.8165467625899281,
+      "intact": 0.8391608391608392,
+      "spalling": 0.6806282722513088
+     },
+     "confusion": [
+      [
+       226,
+       0,
+       1,
+       40
+      ],
+      [
+       0,
+       454,
+       146,
+       0
+      ],
+      [
+       0,
+       58,
+       540,
+       2
+      ],
+      [
+       19,
+       0,
+       0,
+       65
+      ]
+     ],
+     "acc_sdnet_source": 0.8283333333333334,
+     "acc_raidathmane_source": 0.8290598290598291,
+     "acc_originals_only": 0.8284977433913604,
+     "n_augmented": 0
+    },
+    "tile_model_on_grouped_val_contaminated": {
+     "n": 1551,
+     "acc": 0.8252740167633784,
+     "macro_f1": 0.8104136706125327,
+     "balanced_acc": 0.824305109684323,
+     "f1": {
+      "corrosion": 0.8875739644970413,
+      "crack": 0.8156329651656755,
+      "intact": 0.8264058679706601,
+      "spalling": 0.712041884816754
+     },
+     "confusion": [
+      [
+       225,
+       5,
+       0,
+       37
+      ],
+      [
+       0,
+       480,
+       120,
+       0
+      ],
+      [
+       0,
+       91,
+       507,
+       2
+      ],
+      [
+       15,
+       1,
+       0,
+       68
+      ]
+     ],
+     "acc_sdnet_source": 0.8225,
+     "acc_raidathmane_source": 0.8347578347578347,
+     "acc_originals_only": 0.8252740167633784,
+     "n_augmented": 0
+    }
+   },
+   {
+    "seed": 1,
+    "grouped_info": {
+     "train_parents": 184,
+     "val_parents": 46
+    },
+    "tile_model_on_tile_val": {
+     "n": 1600,
+     "acc": 0.82625,
+     "macro_f1": 0.8185800003971797,
+     "balanced_acc": 0.8174999999999999,
+     "f1": {
+      "corrosion": 0.7780979827089337,
+      "crack": 0.8069164265129684,
+      "intact": 0.8483965014577259,
+      "spalling": 0.840909090909091
+     },
+     "confusion": [
+      [
+       135,
+       2,
+       8,
+       55
+      ],
+      [
+       0,
+       420,
+       180,
+       0
+      ],
+      [
+       0,
+       18,
+       582,
+       0
+      ],
+      [
+       12,
+       1,
+       2,
+       185
+      ]
+     ],
+     "acc_sdnet_source": 0.835,
+     "acc_raidathmane_source": 0.8,
+     "acc_originals_only": 0.8269794721407625,
+     "n_augmented": 236
+    },
+    "grouped_model_on_grouped_val": {
+     "n": 1551,
+     "acc": 0.8504190844616376,
+     "macro_f1": 0.8360197822944092,
+     "balanced_acc": 0.8554313804173355,
+     "f1": {
+      "corrosion": 0.9015748031496064,
+      "crack": 0.8357664233576643,
+      "intact": 0.8580199539524175,
+      "spalling": 0.7487179487179488
+     },
+     "confusion": [
+      [
+       229,
+       0,
+       2,
+       36
+      ],
+      [
+       0,
+       458,
+       142,
+       0
+      ],
+      [
+       1,
+       38,
+       559,
+       2
+      ],
+      [
+       11,
+       0,
+       0,
+       73
+      ]
+     ],
+     "acc_sdnet_source": 0.8475,
+     "acc_raidathmane_source": 0.8603988603988604,
+     "acc_originals_only": 0.8504190844616376,
+     "n_augmented": 0
+    },
+    "tile_model_on_grouped_val_contaminated": {
+     "n": 1551,
+     "acc": 0.8471953578336557,
+     "macro_f1": 0.8290339911008029,
+     "balanced_acc": 0.8425902889245585,
+     "f1": {
+      "corrosion": 0.8958742632612967,
+      "crack": 0.8234165067178503,
+      "intact": 0.8628026412325752,
+      "spalling": 0.7340425531914893
+     },
+     "confusion": [
+      [
+       228,
+       1,
+       4,
+       34
+      ],
+      [
+       0,
+       429,
+       171,
+       0
+      ],
+      [
+       0,
+       11,
+       588,
+       1
+      ],
+      [
+       14,
+       1,
+       0,
+       69
+      ]
+     ],
+     "acc_sdnet_source": 0.8475,
+     "acc_raidathmane_source": 0.8461538461538461,
+     "acc_originals_only": 0.8471953578336557,
+     "n_augmented": 0
+    }
+   },
+   {
+    "seed": 2,
+    "grouped_info": {
+     "train_parents": 184,
+     "val_parents": 46
+    },
+    "tile_model_on_tile_val": {
+     "n": 1600,
+     "acc": 0.84,
+     "macro_f1": 0.8322858850519812,
+     "balanced_acc": 0.8308333333333333,
+     "f1": {
+      "corrosion": 0.8,
+      "crack": 0.8396143733567046,
+      "intact": 0.8530805687203792,
+      "spalling": 0.8364485981308412
+     },
+     "confusion": [
+      [
+       146,
+       1,
+       4,
+       49
+      ],
+      [
+       0,
+       479,
+       121,
+       0
+      ],
+      [
+       0,
+       60,
+       540,
+       0
+      ],
+      [
+       19,
+       1,
+       1,
+       179
+      ]
+     ],
+     "acc_sdnet_source": 0.8491666666666666,
+     "acc_raidathmane_source": 0.8125,
+     "acc_originals_only": 0.8460410557184751,
+     "n_augmented": 236
+    },
+    "grouped_model_on_grouped_val": {
+     "n": 1551,
+     "acc": 0.816247582205029,
+     "macro_f1": 0.7977249370473717,
+     "balanced_acc": 0.8117937399678973,
+     "f1": {
+      "corrosion": 0.8774703557312252,
+      "crack": 0.792843691148776,
+      "intact": 0.8294862248696948,
+      "spalling": 0.6910994764397905
+     },
+     "confusion": [
+      [
+       222,
+       1,
+       7,
+       37
+      ],
+      [
+       0,
+       421,
+       179,
+       0
+      ],
+      [
+       0,
+       39,
+       557,
+       4
+      ],
+      [
+       17,
+       1,
+       0,
+       66
+      ]
+     ],
+     "acc_sdnet_source": 0.815,
+     "acc_raidathmane_source": 0.8205128205128205,
+     "acc_originals_only": 0.816247582205029,
+     "n_augmented": 0
+    },
+    "tile_model_on_grouped_val_contaminated": {
+     "n": 1551,
+     "acc": 0.8484848484848485,
+     "macro_f1": 0.8408043803213265,
+     "balanced_acc": 0.8526999732477261,
+     "f1": {
+      "corrosion": 0.9165048543689321,
+      "crack": 0.8300884955752211,
+      "intact": 0.8490566037735849,
+      "spalling": 0.7675675675675676
+     },
+     "confusion": [
+      [
+       236,
+       0,
+       2,
+       29
+      ],
+      [
+       0,
+       469,
+       130,
+       1
+      ],
+      [
+       0,
+       60,
+       540,
+       0
+      ],
+      [
+       12,
+       1,
+       0,
+       71
+      ]
+     ],
+     "acc_sdnet_source": 0.8408333333333333,
+     "acc_raidathmane_source": 0.8746438746438746,
+     "acc_originals_only": 0.8484848484848485,
+     "n_augmented": 0
+    }
+   }
+  ],
+  "summary": {
+   "tile_model_on_tile_val.acc": {
+    "mean": 0.8360416666666667,
+    "std": 0.006965938957208523,
+    "values": [
+     0.841875,
+     0.82625,
+     0.84
+    ]
+   },
+   "tile_model_on_tile_val.macro_f1": {
+    "mean": 0.8258237582247716,
+    "std": 0.005622634543121197,
+    "values": [
+     0.8266053892251537,
+     0.8185800003971797,
+     0.8322858850519812
+    ]
+   },
+   "tile_model_on_tile_val.acc_sdnet_source": {
+    "mean": 0.8472222222222222,
+    "std": 0.00928791860961141,
+    "values": [
+     0.8575,
+     0.835,
+     0.8491666666666666
+    ]
+   },
+   "tile_model_on_tile_val.acc_raidathmane_source": {
+    "mean": 0.8025000000000001,
+    "std": 0.007359800721939854,
+    "values": [
+     0.795,
+     0.8,
+     0.8125
+    ]
+   },
+   "grouped_model_on_grouped_val.acc": {
+    "mean": 0.8317214700193424,
+    "std": 0.014135468431038318,
+    "values": [
+     0.8284977433913604,
+     0.8504190844616376,
+     0.816247582205029
+    ]
+   },
+   "grouped_model_on_grouped_val.macro_f1": {
+    "mean": 0.8128439376141,
+    "std": 0.016639478075279206,
+    "values": [
+     0.804787093500519,
+     0.8360197822944092,
+     0.7977249370473717
+    ]
+   },
+   "grouped_model_on_grouped_val.acc_sdnet_source": {
+    "mean": 0.8302777777777778,
+    "std": 0.013339119115047775,
+    "values": [
+     0.8283333333333334,
+     0.8475,
+     0.815
+    ]
+   },
+   "grouped_model_on_grouped_val.acc_raidathmane_source": {
+    "mean": 0.8366571699905032,
+    "std": 0.017146695237671206,
+    "values": [
+     0.8290598290598291,
+     0.8603988603988604,
+     0.8205128205128205
+    ]
+   }
+  }
+ }
+}
