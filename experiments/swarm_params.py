@@ -8,10 +8,9 @@ from inspectswarm.swarm import Platform
 
 SCOUT_TABLE = [
     # name, value, unit, status, source / reasoning
-    ("Airframe envelope", "10 x 10 x 4", "cm", "published", "SmartBee, public posts by Y. Fu (NTU LIFT lab), 2026"),
-    ("Sensors", "RGB-D camera, accelerometer", "", "published", "same posts"),
-    ("On-board edge AI, self-attachment", "yes", "", "published", "same posts; no performance figures given"),
-    ("Take-off mass", 27, "g", "assumed", "Crazyflie 2.1 datasheet value, used as stand-in for an open nano-drone of this size"),
+    ("Class", "camera-carrying nano-quadrotor with on-board inference", "", "assumed", "as shown by Palossi et al. 2019, 2022"),
+    ("Size", "92 x 92 x 29", "mm", "assumed", "Crazyflie 2.1 datasheet rev 3, used as stand-in for the class"),
+    ("Take-off mass", 29, "g", "assumed", "Crazyflie 2.1 datasheet rev 3"),
     ("Maximum payload", 15, "g", "assumed", "Crazyflie 2.1 datasheet"),
     ("Battery", "250 mAh, 3.7 V (0.925 Wh)", "", "assumed", "Crazyflie 2.1 stock battery"),
     ("Hover endurance, no payload", 7, "min", "assumed", "Crazyflie 2.1 datasheet"),

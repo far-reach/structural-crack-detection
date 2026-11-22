@@ -116,7 +116,7 @@ Seeds are fixed, but GPU training is not bit-reproducible across hardware; expec
 ## Limits
 
 - The swarm tier is a mission-level simulation without flight dynamics, wind, localisation error or communication.
-- Only the size, sensors and functions of the SmartBee nano-drone are taken from public posts by its developer (Y. Fu, NTU). All other scout parameters come from another nano-quadrotor of the same size class and are marked as assumed. No swarm version of SmartBee is known to the author, and none is implied.
+- The scout stands for a class (camera-carrying nano-quadrotor with on-board inference). All scout parameters come from the Crazyflie 2.1 datasheet and are marked as assumed. The swarm is the author's own construction; no swarm version of any existing platform is implied.
 - The link between visible damage and hidden defects is an assumption, which the paper varies.
 - The ultrasonic data are laboratory measurements by an automated scanner, not by an aircraft.
 
