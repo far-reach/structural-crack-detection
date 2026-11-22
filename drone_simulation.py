@@ -26,7 +26,8 @@ RESULTS_DIR = "results"
 GRID_ROWS   = 4
 GRID_COLS   = 5
 NUM_CLASSES = 4
-CLASSES     = ["crack", "intact", "corrosion", "spalling"]
+from inspectswarm.classes import V1_CLASSES  # v2.0 fix: one shared class order (alphabetical, as in training)
+CLASSES     = list(V1_CLASSES)
 DEVICE      = torch.device("cpu")
 
 CLASS_COLORS = {

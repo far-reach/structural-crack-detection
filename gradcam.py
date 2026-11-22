@@ -19,7 +19,8 @@ DEVICE     = torch.device("cpu")
 MODEL_PATH = "models/best_resnet50_multiclass.pth"
 DATA_DIR   = "data/codebrim/val"
 RESULTS    = "results/plots"
-CLASSES    = ["crack", "intact", "corrosion", "spalling"]
+from inspectswarm.classes import V1_CLASSES  # v2.0 fix: one shared class order (alphabetical, as in training)
+CLASSES    = list(V1_CLASSES)
 
 # Load model
 model = models.resnet50(weights=None)

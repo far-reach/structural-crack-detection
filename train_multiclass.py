@@ -21,7 +21,8 @@ import numpy as np
 DATA_DIR    = "data/codebrim"
 MODEL_DIR   = "models"
 RESULTS_DIR = "results"
-CLASSES     = ["crack", "intact", "corrosion", "spalling"]
+from inspectswarm.classes import V1_CLASSES  # v2.0 fix: one shared class order (alphabetical, as in training)
+CLASSES     = list(V1_CLASSES)
 NUM_CLASSES = 4
 BATCH_SIZE  = 16
 NUM_EPOCHS  = 20
