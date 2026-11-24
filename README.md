@@ -2,7 +2,9 @@
 
 Code and results for two studies by Seyed Farhad Abtahi.
 
-- **Version 2.0 (this version):** "Screen, then confirm: leak-free vision screening, single-point ultrasonic confirmation and a simulated nano-drone swarm for the inspection of concrete structures." Manuscript in preparation.
+![Graphical abstract: camera nano-drones screen every zone, a contact carrier confirms flagged zones with a single ultrasonic reading, and a Bayesian rule fuses the evidence per zone](results_v2/figures/graphical_abstract.png)
+
+- **Version 2.0 (this version):** "Screen, then confirm: nano-drone vision screening with single-point ultrasonic confirmation for concrete inspection." Manuscript complete; the preprint link will be added here when it is posted.
 - **Version 1.0:** "Automated Multi-Class Structural Damage Detection and Segmentation for UAV-Based Infrastructure Inspection Using Deep Learning", engrXiv preprint, [doi.org/10.31224/7685](https://doi.org/10.31224/7685). The v1.0 scripts and figures remain in the repository root and in `results/`.
 
 No hardware was built or flown. The swarm results are simulations, and every assumed parameter is marked as assumed.
@@ -16,6 +18,9 @@ An audit of the v1.0 code for the second study found the following. The preprint
 3. **Not affected.** Stage 1 accuracy (85.69%), its confusion matrix and per-class F1, the ablation, the Stage 2 segmentation results and the timing figures. The original split was rebuilt and the confusion matrix reproduced cell for cell.
 4. **Evaluation protocol.** The v1.0 validation split shares parent photographs with the training split (all 1,200 SDNET2018 validation tiles), contains 236 augmented images, and pairs each class with one image source. Retraining the v1.0 recipe three times under a grouped split with original images only gives 83.2 ± 1.4% accuracy against 83.6 ± 0.7% under the original split, so the parent leak itself changed little. The source pairing is the serious flaw: applied to CODEBRIM, the released classifier calls only 19.5% of sound concrete regions intact. On original validation images the F1 of spalling is 0.71 to 0.73, not 0.886.
 5. **Repository hygiene.** The previous `.gitignore` was stored as UTF-16 and was not read by git. It is now UTF-8.
+
+<p align="center"><img src="results_v2/audit/drone_damage_map_corrected.png" width="620" alt="Corrected damage map of the v1.0 grid flight"><br>
+<sub>The v1.0 grid flight, re-run with the released weights and the correct class order: predicted class and confidence against the true class for each frame.</sub></p>
 
 All four scripts now import the class list from `inspectswarm/classes.py`, and `tests/test_classes.py` fails if any script defines its own.
 
@@ -31,6 +36,19 @@ All four scripts now import the class list from `inspectswarm/classes.py`, and `
 Negative and limiting results are reported with the same weight: distillation did not improve the two smallest networks; default 8-bit quantisation breaks ConvNeXt-Tiny and MobileNetV3-Small; models trained on one image source lose much of their accuracy on another; a nano-drone cannot carry or press an ultrasonic probe in free flight.
 
 Tables: `results_v2/tables.md`. Figures: `results_v2/figures/`. Every JSON file in `results_v2/` holds the result together with a manifest (configuration, seed, package versions, git commit, hardware, time).
+
+## Figures
+
+<table>
+<tr>
+<td width="50%"><img src="results_v2/figures/fig1_framework.png" alt="Screen, then confirm framework"><br><sub><b>Framework.</b> What is measured on real data and what is assumed, then varied.</sub></td>
+<td width="50%"><img src="results_v2/figures/fig3_vision.png" alt="Vision tier results"><br><sub><b>Vision tier.</b> Accuracy against model size, with and without distillation, and the effect of 8-bit quantisation.</sub></td>
+</tr>
+<tr>
+<td><img src="results_v2/figures/fig4_ultrasonic.png" alt="Ultrasonic tier results"><br><sub><b>Ultrasonic tier.</b> B-scans, ground truth and detector output for each specimen, always from a network trained without that specimen.</sub></td>
+<td><img src="results_v2/figures/fig5_swarm.png" alt="Swarm simulation results"><br><sub><b>Swarm tier.</b> Mission time against swarm size, hidden-defect recall against contact budget, and robustness to a degraded ultrasonic sensor.</sub></td>
+</tr>
+</table>
 
 ## Layout
 
